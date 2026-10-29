@@ -28,12 +28,9 @@ export function Hero() {
   return (
     <section ref={ref} className="relative isolate flex flex-col overflow-hidden lg:min-h-[100svh]" aria-labelledby="hero-title">
       {/* atmosfera: iluminação quente atrás da modelo */}
-      <div className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(55%_75%_at_74%_52%,rgba(198,134,89,.42),transparent_70%),radial-gradient(40%_50%_at_8%_20%,rgba(166,106,67,.22),transparent_70%)]" aria-hidden="true" />
-      <motion.div style={{ y: yEmblem }} className="pointer-events-none absolute -right-[12%] top-[38%] -z-10 hidden w-[min(62vw,118vh)] -translate-y-1/2 opacity-80 lg:block" aria-hidden="true">
-        <Emblem className="w-full" />
-      </motion.div>
+      <div className="pointer-events-none absolute inset-0 -z-20 bg-[radial-gradient(55%_75%_at_62%_52%,rgba(198,134,89,.42),transparent_70%),radial-gradient(40%_50%_at_8%_20%,rgba(166,106,67,.22),transparent_70%)]" aria-hidden="true" />
 
-      <div className="relative mx-auto grid w-full max-w-[1560px] flex-1 grid-cols-1 px-5 pt-6 sm:px-8 lg:grid-cols-[1.08fr_0.92fr] lg:px-12 lg:pt-0">
+      <div className="relative mx-auto grid w-full max-w-[1280px] flex-1 grid-cols-1 px-5 pt-6 sm:px-8 lg:grid-cols-[minmax(0,1.12fr)_minmax(0,0.88fr)] lg:px-10 lg:pt-0">
         {/* Texto */}
         <div className="relative z-10 flex flex-col items-center text-center lg:items-start lg:justify-center lg:py-[min(2.5rem,4vh)] lg:text-left">
           <motion.div initial={{ opacity: 0, y: -14 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.9, ease: EASE }}>
@@ -58,11 +55,11 @@ export function Hero() {
             className="mt-4 select-none leading-none lg:mt-[min(1.2rem,2vh)]"
             aria-label="Black Negra Rosa"
           >
-            <span className="lg:flex lg:items-baseline lg:gap-[1.4vw]" aria-hidden="true">
-              <span className="block font-display text-[3.6rem] font-medium uppercase leading-[0.86] tracking-[-0.03em] text-champagne sm:text-[6rem] lg:text-[min(9.6rem,15vh,6.2vw)]">Black</span>
-              <span className="text-bronze-grad block font-display text-[3.4rem] font-bold leading-[0.9] tracking-[-0.02em] sm:text-[5.6rem] lg:text-[min(9rem,14.2vh,5.9vw)]">Negra</span>
+            <span className="lg:flex lg:items-baseline lg:gap-[min(1.4vw,1.5rem)]" aria-hidden="true">
+              <span className="block font-display text-[3.6rem] font-medium uppercase leading-[0.86] tracking-[-0.03em] text-champagne sm:text-[6rem] lg:text-[min(9.6rem,15vh,calc(min(100vw,1376px)*.074))]">Black</span>
+              <span className="text-bronze-grad block font-display text-[3.4rem] font-bold leading-[0.9] tracking-[-0.02em] sm:text-[5.6rem] lg:text-[min(9rem,14.2vh,calc(min(100vw,1376px)*.07))]">Negra</span>
             </span>
-            <span className="relative -mt-2 block font-script text-[4.2rem] leading-[0.95] text-champagne sm:-mt-4 sm:text-[7rem] lg:-mt-[.1em] lg:ml-[16%] lg:text-[min(11.5rem,18vh,8vw)]" aria-hidden="true">
+            <span className="relative -mt-2 block font-script text-[4.2rem] leading-[0.95] text-champagne sm:-mt-4 sm:text-[7rem] lg:-mt-[.1em] lg:ml-[16%] lg:text-[min(11.5rem,18vh,calc(min(100vw,1376px)*.095))]" aria-hidden="true">
               Rosa
               <span className="absolute -bottom-1 left-1/2 h-[3px] w-[78%] -translate-x-1/2 rounded-full bg-gradient-to-r from-transparent via-caramel to-transparent lg:left-0 lg:translate-x-0" />
             </span>
@@ -72,7 +69,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.4, ease: EASE }}
-            className="mt-5 font-serif font-semibold leading-tight text-ivory text-[1.45rem] sm:text-3xl lg:mt-[min(1.6rem,2.6vh)] lg:text-[min(2.7rem,5vh,2.5vw)]"
+            className="mt-5 font-serif font-semibold leading-tight text-ivory text-[1.45rem] sm:text-3xl lg:mt-[min(1.6rem,2.6vh)] lg:text-[min(2.7rem,5vh,calc(min(100vw,1376px)*.03))]"
           >
             Looks de <span className="text-metal whitespace-nowrap font-display font-bold">{PRICE_FROM}</span>{' '}
             <span className="font-script text-caramel">a</span>{' '}
@@ -100,12 +97,15 @@ export function Hero() {
 
         {/* Modelo */}
         <div className="relative mt-8 min-h-[26rem] lg:mt-0 lg:min-h-0">
+          <motion.div style={{ y: yEmblem }} className="pointer-events-none absolute left-[42%] top-[46%] -z-10 hidden w-[min(135%,108vh)] -translate-x-1/2 -translate-y-1/2 opacity-80 lg:block" aria-hidden="true">
+            <Emblem className="w-full" />
+          </motion.div>
           <motion.div
             style={{ y: yPhoto }}
             initial={{ opacity: 0, scale: 0.97 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.2, delay: 0.25, ease: EASE }}
-            className="absolute bottom-0 left-1/2 aspect-[484/805] h-full max-h-[34rem] -translate-x-1/2 lg:left-auto lg:right-[2%] lg:h-[calc(100svh-4.5rem)] lg:max-h-[56rem] lg:translate-x-0 xl:right-[5%]"
+            className="absolute bottom-0 left-1/2 aspect-[484/805] h-full max-h-[34rem] -translate-x-1/2 lg:left-[-2%] lg:h-[calc(100svh-4.5rem)] lg:max-h-[56rem] lg:translate-x-0"
           >
             <ModelPhoto eager className="h-full w-full" style={PHOTO_MASK} sizes="(min-width:1024px) 520px, 90vw" />
 
@@ -120,7 +120,7 @@ export function Hero() {
             </div>
 
             {/* selo giratório */}
-            <Seal className="absolute -left-[6%] top-[46%] h-[5.2rem] w-[5.2rem] sm:h-24 sm:w-24 lg:-left-[10%] lg:h-[clamp(5.4rem,7.4vw,8rem)] lg:w-[clamp(5.4rem,7.4vw,8rem)]" />
+            <Seal className="absolute -right-[4%] top-[50%] h-[5.2rem] w-[5.2rem] sm:h-24 sm:w-24 lg:-right-[6%] lg:h-[clamp(5.4rem,6.4vw,7.6rem)] lg:w-[clamp(5.4rem,6.4vw,7.6rem)]" />
 
             {/* datas sobre a modelo */}
             <ul className="absolute inset-x-0 bottom-[5%] flex justify-center gap-2.5 sm:gap-3" aria-label="05, 06 e 07 de novembro">

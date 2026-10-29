@@ -75,6 +75,8 @@ body {
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 .text-bronze-grad {
+  /* folga embaixo para a cauda do "g" não ser cortada pelo background-clip */
+  padding-bottom: 0.22em; margin-bottom: -0.22em;
   background: linear-gradient(180deg, #d9a07a 0%, #c68659 50%, #a66a43 100%);
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }

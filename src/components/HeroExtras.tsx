@@ -23,7 +23,7 @@ export function Emblem({ className = '' }: { className?: string }) {
 /** Selo circular com texto em volta e mandala no centro (como o selo da referência). */
 export function Seal({ className = '' }: { className?: string }) {
   return (
-    <div className={`relative grid place-items-center rounded-full border border-champagne/30 bg-chocolate/55 backdrop-blur-md shadow-[0_14px_30px_-10px_rgba(0,0,0,.7)] ${className}`} aria-hidden="true">
+    <div className={`grid place-items-center rounded-full border border-champagne/30 bg-chocolate/55 backdrop-blur-md shadow-[0_14px_30px_-10px_rgba(0,0,0,.7)] ${className}`} aria-hidden="true">
       <svg viewBox="0 0 120 120" className="absolute inset-0 h-full w-full animate-spin-slow">
         <defs>
           <path id="seal-circle" d="M60 60 m-47 0 a47 47 0 1 1 94 0 a47 47 0 1 1 -94 0" />
