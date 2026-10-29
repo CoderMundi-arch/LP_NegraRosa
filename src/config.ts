@@ -2,7 +2,7 @@
  * ÚNICO lugar para configurar a campanha.
  * Troque VIP_GROUP_URL pelo link real do Grupo VIP do WhatsApp.
  */
-export const VIP_GROUP_URL = 'https://chat.whatsapp.com/SEU-LINK-DO-GRUPO-VIP'
+export const VIP_GROUP_URL = 'https://chat.whatsapp.com/DetS7Ja7Dt4E1PKh3IqmlY?s=cl&p=i&mlu=4&ilr=4&iam=2'
 
 export const BRAND = 'Boutique Moda Feminina'
 
