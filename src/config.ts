@@ -16,7 +16,7 @@ export const PRICE_TO = 'R$ 99,90'
 
 /** IDs opcionais — se preenchidos, os scripts são carregados em src/lib/analytics.ts */
 export const GA4_ID = ''
-export const META_PIXEL_ID = ''
+export const META_PIXEL_ID = '1288023090145501'
 
 /**
  * Imagens da loja oficial (Nuvemshop). Carregadas direto da CDN da própria loja.
