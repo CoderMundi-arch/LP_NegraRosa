@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  base: '/LP_NegraRosa/',
+  base: '/',
   plugins: [react(), tailwindcss()],
   build: { target: 'es2020', cssCodeSplit: false },
 })
