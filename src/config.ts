@@ -7,9 +7,9 @@ export const VIP_GROUP_URL = 'https://chat.whatsapp.com/DetS7Ja7Dt4E1PKh3IqmlY?s
 export const BRAND = 'Boutique Moda Feminina'
 
 /** Fuso de Brasília (UTC-3, sem horário de verão desde 2019). Offset explícito => independe do relógio/fuso do dispositivo. */
-export const CAMPAIGN_START = '2026-11-05T00:00:00-03:00'
-/** Primeiro instante APÓS o dia 07/11 (08/11 às 00:00 em Brasília). */
-export const CAMPAIGN_END = '2026-11-08T00:00:00-03:00'
+export const CAMPAIGN_START = '2026-11-09T00:00:00-03:00'
+/** Primeiro instante APÓS o dia 20/11 (21/11 às 00:00 em Brasília). */
+export const CAMPAIGN_END = '2026-11-21T00:00:00-03:00'
 
 export const PRICE_FROM = 'R$ 17'
 export const PRICE_TO = 'R$ 99,90'
