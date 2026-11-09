@@ -7,7 +7,7 @@ import { ModelPhoto } from './ModelPhoto'
 import { Emblem, Marquee, Seal } from './HeroExtras'
 import { PRICE_FROM, PRICE_TO } from '../config'
 
-const DATES = ['05', '06', '07']
+const DATES = ['09', '20']
 const EASE = [0.22, 1, 0.36, 1] as const
 
 /** Dissolve as bordas laterais/superior da foto no fundo; a base fica firme sobre a faixa. */
@@ -44,7 +44,7 @@ export function Hero() {
             className="glass mt-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-[0.66rem] font-medium uppercase tracking-[0.26em] text-champagne sm:text-xs lg:mt-[min(1.6rem,2.6vh)]"
           >
             <Sparkles className="h-3.5 w-3.5 text-nude" aria-hidden="true" />
-            Somente 05 · 06 · 07 de novembro
+            De 09 a 20 de novembro
           </motion.div>
 
           <motion.h1
@@ -123,7 +123,7 @@ export function Hero() {
             <Seal className="absolute -right-[4%] top-[50%] h-[5.2rem] w-[5.2rem] sm:h-24 sm:w-24 lg:-right-[6%] lg:h-[clamp(5.4rem,6.4vw,7.6rem)] lg:w-[clamp(5.4rem,6.4vw,7.6rem)]" />
 
             {/* datas sobre a modelo */}
-            <ul className="absolute inset-x-0 bottom-[5%] flex justify-center gap-2.5 sm:gap-3" aria-label="05, 06 e 07 de novembro">
+            <ul className="absolute inset-x-0 bottom-[5%] flex justify-center gap-2.5 sm:gap-3" aria-label="De 09 a 20 de novembro">
               {DATES.map((d, i) => (
                 <li
                   key={d}
