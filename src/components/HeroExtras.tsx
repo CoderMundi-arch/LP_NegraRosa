@@ -29,7 +29,7 @@ export function Seal({ className = '' }: { className?: string }) {
           <path id="seal-circle" d="M60 60 m-47 0 a47 47 0 1 1 94 0 a47 47 0 1 1 -94 0" />
         </defs>
         <text fill="#f5e2cf" fontSize="9.2" letterSpacing="3.1" fontFamily="Jost Variable, sans-serif" fontWeight="500">
-          <textPath href="#seal-circle">BLACK NEGRA ROSA ◆ 09 A 20 NOV ◆ </textPath>
+          <textPath href="#seal-circle">BLACK NEGRA ROSA ◆ 9 NOV ATÉ 20 NOV ◆ </textPath>
         </text>
       </svg>
       <svg viewBox="0 0 64 64" className="h-[38%] w-[38%]" fill="none" stroke="#eac5a8" strokeWidth="1.6">
@@ -52,7 +52,7 @@ function Ornament() {
   )
 }
 
-const ITEMS = ['BLACK NEGRA ROSA', 'LOOKS DE R$ 17 A R$ 99,90', '09 A 20 DE NOVEMBRO']
+const ITEMS = ['BLACK NEGRA ROSA', 'LOOKS DE R$ 17 A R$ 99,90', '9 DE NOVEMBRO ATÉ 20 DE NOVEMBRO']
 
 /** Faixa rolante na base do hero. */
 export function Marquee() {
