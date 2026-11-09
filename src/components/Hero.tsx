@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform, useReducedMotion } from 'motion/react'
 import { Sparkles } from 'lucide-react'
-import { useRef } from 'react'
+import { Fragment, useRef } from 'react'
 import { Logo } from './Logo'
 import { CTAButton } from './CTAButton'
 import { ModelPhoto } from './ModelPhoto'
@@ -44,7 +44,7 @@ export function Hero() {
             className="glass mt-4 inline-flex items-center gap-2 rounded-full px-4 py-2 text-[0.66rem] font-medium uppercase tracking-[0.26em] text-champagne sm:text-xs lg:mt-[min(1.6rem,2.6vh)]"
           >
             <Sparkles className="h-3.5 w-3.5 text-nude" aria-hidden="true" />
-            De 09 a 20 de novembro
+            De 9 de novembro até 20 de novembro
           </motion.div>
 
           <motion.h1
@@ -123,16 +123,18 @@ export function Hero() {
             <Seal className="absolute -right-[4%] top-[50%] h-[5.2rem] w-[5.2rem] sm:h-24 sm:w-24 lg:-right-[6%] lg:h-[clamp(5.4rem,6.4vw,7.6rem)] lg:w-[clamp(5.4rem,6.4vw,7.6rem)]" />
 
             {/* datas sobre a modelo */}
-            <ul className="absolute inset-x-0 bottom-[5%] flex justify-center gap-2.5 sm:gap-3" aria-label="De 09 a 20 de novembro">
+            <ul className="absolute inset-x-0 bottom-[5%] flex justify-center gap-2.5 sm:gap-3" aria-label="De 9 de novembro até 20 de novembro">
               {DATES.map((d, i) => (
+                <Fragment key={d}>
+                {i === 1 && <span className="self-center font-script text-xl text-champagne sm:text-2xl">até</span>}
                 <li
-                  key={d}
                   className="date-card animate-glow flex w-[4.2rem] flex-col items-center rounded-2xl py-2 sm:w-[5.2rem] sm:py-2.5 lg:w-[clamp(4.4rem,5.4vw,6.2rem)] lg:py-[min(.7rem,1.3vh)]"
                   style={{ animationDelay: `${i * 0.5}s` }}
                 >
                   <span className="font-display text-[1.7rem] font-bold leading-none sm:text-[2.4rem] lg:text-[min(3.1rem,5.6vh)]">{d}</span>
                   <span className="mt-1.5 w-8 border-t border-cocoa/40 pt-1 text-[0.6rem] font-semibold tracking-[0.2em] sm:w-10 sm:text-[0.68rem]">NOV</span>
                 </li>
+                </Fragment>
               ))}
             </ul>
           </motion.div>
